@@ -1,0 +1,42 @@
+	
+			.total{
+				margin-top: 40px;
+				width: 229px;	
+			}
+			body{
+				background-color: rgba(0,0,0,0.9);
+				height: 495px;
+			}
+			html{
+				border-right: 1px solid darkgray;
+			}
+			.t1 > .tb{
+				margin-left: 20px;
+				margin-top: 20px;
+			}
+			.t1 > .th{
+				margin-left: 30px;
+			}
+			.th > img{
+				margin-right: 10px;
+			}
+			.th > span{
+				font-size: larger;
+				color: #EEDD82;
+			}
+			ul > li > a > span{
+				color: antiquewhite;
+			}
+			ul > li > a{
+				text-decoration: none;
+				color: #000000;
+			}
+			ul > li{
+				list-style: none;
+				height: 30px;
+				line-height: -moz-block-height;
+				
+			}
+			ul{
+				border-style: none;
+			}

@@ -1,0 +1,23 @@
+body {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#top {
+	width: 500px;
+	height: 400px;
+	margin: 20px auto;
+}
+
+input {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	border: 0;
+	color: gainsboro;
+	padding: 10px;
+}
+
+#bottom {
+	margin-right: 200px;
+	float: right;
+}
