@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -23,8 +25,8 @@
 				</div>
 				<div class="tb" id="tb1">
 					<ul>
-						<li id="tb11"><a href="基本信息.html" target="right"><span>基本信息</span></a></li>
-						<li id="tb12"><a href="修改信息.html" target="right"><span>修改信息</span></a></li>
+						<li id="tb11"><a href="jibenxinxi.jsp" target="right"><span>基本信息</span></a></li>
+						<li id="tb12"><a href="update.jsp" target="right"><span>修改信息</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -35,9 +37,9 @@
 				</div>
 				<div class="tb" id="tb2">
 					<ul>
-						<li><a href="新建文章.html" target="right"><span>新建文章</span></a></li>
-						<li><a href="文章管理.html" target="right"><span>文章管理</span></a></li>
-						<li><a href="草稿箱.html" target="right"><span>草稿箱</span></a></li>
+						<li><a href="creatFile.jsp" target="right"><span>新建文章</span></a></li>
+						<li><a href="wenzhangGuanli.jsp" target="right"><span>文章管理</span></a></li>
+						<li><a href="caogao.jsp" target="right"><span>草稿箱</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -48,7 +50,7 @@
 				</div>
 				<div class="tb" id="tb3">
 					<ul>
-						<li><a href="文件管理.html" target="right"><span>文件管理</span></a></li>
+						<li><a href="fileGuanli.jsp" target="right"><span>文件管理</span></a></li>
 					</ul>
 				</div>
 			</div>

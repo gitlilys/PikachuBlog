@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -5,11 +7,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>页面</title>
-		<link rel="stylesheet" href="../../css/bootstrap.css" />
-		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
-		<script type="text/javascript" src="../../js/bootstrap.js" ></script>
-		<link rel="stylesheet" href="../../css/首页/首页.css" />
-		<script type="text/javascript" src="../../js/首页/首页.js" ></script>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<link rel="stylesheet" href="css/首页/首页.css" />
+		<script type="text/javascript" src="js/首页/首页.js" ></script>
 	</head>
 	<body>
 		<div class="container-fluid" id="body">
@@ -20,10 +22,10 @@
 				</div>
 				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
 					<div id="regist" class="col-md-6 col-sm-6 col-xs-6 head">
-						<a href="注册页面.html"><span>注册</span></a> 	
+						<a href="JSP/regester.jsp"><span>注册</span></a> 	
 					</div>
 					<div id="login" class="col-md-6 col-sm-6 col-xs-6 head">
-						<a href="登录页面.html"><span>登录</span></a>
+						<a href="JSP/login.jsp"><span>登录</span></a>
 					</div>
 
 				</div>
@@ -48,21 +50,21 @@
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 		    <div class="item active col-md-12 col-sm-12 col-xs-12">
-		      <a href="#"><img src="../../img/13.jpg" alt="..."></a>
+		      <a href="#"><img src="img/13.jpg" alt="..."></a>
 		      
 		      <div class="carousel-caption">
 		        
 		      </div>
 		    </div>
 		    <div class="item col-md-12 col-sm-12 col-xs-12">
-		      <a href="#"><img src="../../img/14.jpg" alt="..."></a>
+		      <a href="#"><img src="img/14.jpg" alt="..."></a>
 		      <div class="carousel-caption">
 		       
 		      </div>
 		    </div>
 		    <div class="item col-md-12 col-sm-12 col-xs-12">
 		    	
-		      <a href="#"><img src="../../img/18.jpg" alt="">
+		      <a href="#"><img src="img/18.jpg" alt="">
 		      	
 		      </a>
 		      <div class="carousel-caption">
@@ -92,7 +94,7 @@
 			<div class="main_container_bottom">
 				<a href="#">
 				<div class="main_container_bottom_left">
-					<img src="../../img/u=1708949714,1776242730&fm=26&gp=0.jpg"/>
+					<img src="img/u=1708949714,1776242730&fm=26&gp=0.jpg"/>
 				</div>
 				</a>
 				<div class="main_container_bottom_right">
@@ -110,7 +112,7 @@
 			<div class="main_container_bottom">
 				<a href="#">
 				<div class="main_container_bottom_left">
-					<img src="../../img/u=2999562497,3067484911&fm=26&gp=0.jpg"/>
+					<img src="img/u=2999562497,3067484911&fm=26&gp=0.jpg"/>
 				</div>
 				</a>
 				<div class="main_container_bottom_right">
@@ -127,7 +129,7 @@
 			<div class="main_container_bottom">
 				<a href="#">
 				<div class="main_container_bottom_left">
-					<img src="../../img/14.jpg">
+					<img src="img/14.jpg">
 				</div>
 				</a>
 				<div class="main_container_bottom_right">

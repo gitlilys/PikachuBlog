@@ -1,5 +1,14 @@
 eclipse.preferences.version=1
 encoding//WebContent/JSP/login.jsp=UTF-8
+encoding//WebContent/JSP/user/caogao.jsp=UTF-8
+encoding//WebContent/JSP/user/creatFile.jsp=UTF-8
+encoding//WebContent/JSP/user/fileGuanli.jsp=UTF-8
+encoding//WebContent/JSP/user/jibenxinxi.jsp=UTF-8
+encoding//WebContent/JSP/user/left.jsp=UTF-8
+encoding//WebContent/JSP/user/top.jsp=UTF-8
+encoding//WebContent/JSP/user/update.jsp=UTF-8
+encoding//WebContent/JSP/user/userSuccessLogin.jsp=UTF-8
+encoding//WebContent/JSP/user/wenzhangGuanli.jsp=UTF-8
 encoding//WebContent/index.jsp=UTF-8
 encoding//WebContent/success.jsp=UTF-8
 encoding//WebContent/test.jsp=UTF-8

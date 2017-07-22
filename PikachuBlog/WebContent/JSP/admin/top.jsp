@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -7,7 +9,7 @@
 		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
 		<script type="text/javascript" src="../../js/bootstrap.js" ></script>
 		<link rel="stylesheet" href="../../css/bootstrap.css" />
-		<title>头部</title>
+	<title>头部</title>
 	</head>
 	<style>
 		body{
@@ -27,7 +29,7 @@
 			<div class="col-md-3">
 				<img src="../../img/u=1708949714,1776242730&fm=26&gp=0.jpg" class="img-circle" width="50px" height="50px">
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<span>用户：***</span>
+				<span>用户：***</span>
 			</div>
 		</div>
 	</body>

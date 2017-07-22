@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -8,7 +10,7 @@
 		<script type="text/javascript" src="../../js/bootstrap.js" ></script>
 		<link rel="stylesheet" href="../../css/bootstrap.css" />
 		<link rel="stylesheet" href="../../css/管理员登录成功/评论审核.css" />
-		<title>文件审核</title>
+		<title>文章审核</title>
 	</head>
 	<body>
 		<form action="#" method="post">
