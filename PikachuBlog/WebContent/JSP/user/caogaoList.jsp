@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -13,8 +15,8 @@
 		<title>草稿箱</title>
 	</head>
 	<body>
-		<script type="text/javascript">
-			window.location="${pageContext.request.contextPath}/blog/findCaoGaoPaper"	
-		</script>
+		<c:forEach var='i' begin='1' end='${fn:length(list)}'>
+			<a href="${pageContext.request.contextPath}/blog/findPaperById?${list[i-1].blog_id}">${list[i-1].blog_content}</a>
+		</c:forEach>
 	</body>
 </html>
