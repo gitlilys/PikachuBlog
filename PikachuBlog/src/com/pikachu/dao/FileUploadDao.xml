@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pikachu.dao.FileUploadDao">
+	
+	<insert id="saveFile" parameterType="com.pikachu.domain.File">
+		insert into tb_file values(#{file_id},#{file_user},#{file_name},#{file_url},#{file_type},#{file_createtime},#{file_enable})
+	</insert>
+
+	<select id="getFileByName" parameterType="String" parameterMap="com.pikachu.domain.File">
+		select file_url from tb_file while file_name=#{name}	
+	</select>
+
+	<select id="getFileByUser" parameterType="String" parameterMap="com.pikachu.domain.File">
+		select file_url from tb_file while file_user=#{user}	
+	</select>
+</mapper> 

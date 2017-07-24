@@ -7,5 +7,7 @@
 		<title>文件管理</title>
 	</head>
 	<body>
+		文本框: <br>
+		<textarea rows="5" cols="30"></textarea>
 	</body>
 </html>

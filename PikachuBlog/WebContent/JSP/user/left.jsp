@@ -50,7 +50,7 @@
 				</div>
 				<div class="tb" id="tb3">
 					<ul>
-						<li><a href="fileGuanli.jsp" target="right"><span>文件管理</span></a></li>
+						<li><a href="../../ckfinder/ckfinder.html" target="right"><span>文件管理</span></a></li>
 					</ul>
 				</div>
 			</div>
