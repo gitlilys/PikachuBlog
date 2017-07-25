@@ -8,7 +8,8 @@
 		<title>查看文章</title>
 	</head>
 	<body>
-	<textarea id="myeditor" name="myeditor" rows="5" cols="60">${content}</textarea>
+	标题:&nbsp;<textarea rows="1" cols="50">${content.blog_title}</textarea>
+	<textarea id="myeditor" name="myeditor" rows="5" cols="60">${content.blog_content}</textarea>
 
 	<script type="text/javascript">
 		window.onload=function() {

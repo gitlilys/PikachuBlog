@@ -1,5 +1,6 @@
 package com.pikachu.serviceImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,8 @@ public class PaperServiceImpl implements PaperService {
 	}
 
 	@Override
-	public String findPaperById(String id) {
-		String content = paperDao.findPaperById(id);
+	public Paper findPaperById(String id) {
+		Paper content = paperDao.findPaperById(id);
 		return content;
 	}
 	

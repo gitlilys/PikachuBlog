@@ -10,6 +10,6 @@ public interface PaperDao {
 
 	public List<Paper> findCaoGao(int enable);
 
-	public String findPaperById(String id);
+	public Paper findPaperById(String id);
 		
 }
