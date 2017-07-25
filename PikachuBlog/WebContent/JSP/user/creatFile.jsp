@@ -11,7 +11,8 @@
 	<form id="input" action="${pageContext.request.contextPath}/blog/savePaper" method="post" >	
 		标题:&nbsp;<textarea rows="1" cols="50" id="title" name="title" ></textarea>
 		<textarea id="myeditor" name="myeditor" rows="5" cols="60"></textarea>
-		<input type="submit" value="保存">	
+		<input  type="submit" name="submit" value="保存">&nbsp;&nbsp;
+		<input  type="submit" name="submit" value="提交">	
 	</form>
 		
 	<script type="text/javascript">

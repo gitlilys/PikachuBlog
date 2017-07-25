@@ -8,7 +8,7 @@ public interface PaperDao {
 
 	public void save(Paper paper);
 
-	public List<Paper> findCaoGao();
+	public List<Paper> findCaoGao(int enable);
 
 	public String findPaperById(String id);
 		

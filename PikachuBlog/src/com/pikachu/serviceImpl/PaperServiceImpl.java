@@ -20,9 +20,9 @@ public class PaperServiceImpl implements PaperService {
 	}
 
 	@Override
-	public List<Paper> findCaoGao() {
+	public List<Paper> findCaoGao(int enable) {
 		List<Paper> list;
-		list = paperDao.findCaoGao();
+		list = paperDao.findCaoGao(enable);
 		return list;
 	}
 

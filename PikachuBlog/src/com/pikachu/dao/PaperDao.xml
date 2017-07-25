@@ -18,8 +18,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="blog_enable" property="blog_enable" />
 	</resultMap>
 
-	<select id="findCaoGao" resultMap="PaperMap" >
-		select * from tb_blog where blog_enable=0	
+	<select id="findCaoGao" parameterType="java.lang.Integer" resultMap="PaperMap" >
+		select * from tb_blog where blog_enable=#{blog_enable}	
 	</select>	
 	
 	<select id="findPaperById" parameterType="java.lang.String" resultType="java.lang.String">

@@ -8,7 +8,7 @@ public interface PaperService {
 
 	public void savePaper(Paper paper);
 
-	public List<Paper> findCaoGao();
+	public List<Paper> findCaoGao(int enable);
 
 	public String findPaperById(String id);
 
