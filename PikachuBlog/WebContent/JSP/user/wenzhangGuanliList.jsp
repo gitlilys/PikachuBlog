@@ -16,7 +16,7 @@
 	</head>
 	<body>
 		<c:forEach var='i' begin='1' end='${fn:length(list)}'>
-			<a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}">${list[i-1].blog_title}</a> <br>
+			<a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=0">${list[i-1].blog_title}</a> <br>
 		</c:forEach>
 	</body>
 </html>

@@ -71,6 +71,7 @@ public class PaperController {
 		
 		Paper list = paperService.findPaperById(id);
 		
+		request.getSession().setAttribute("paperId", id);
 		request.getSession().setAttribute("content", list);
 		
 		if(type == 1)
