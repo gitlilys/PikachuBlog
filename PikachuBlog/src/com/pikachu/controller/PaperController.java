@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.pikachu.Utils.BaseUtils;
 import com.pikachu.domain.Paper;
@@ -24,12 +25,13 @@ public class PaperController {
 	public String savePaper(HttpServletRequest request) {
 		Paper paper = new Paper();
 		String content = request.getParameter("myeditor");
+		String title = request.getParameter("title");
 		paper.setBlog_id(BaseUtils.getUUID());
 		paper.setBlog_user("ha");
+		paper.setBlog_title(title);
 		paper.setBlog_content(content);
 
 		paperService.savePaper(paper);
-		
 		return "redirect:/JSP/user/wenzhangGuanli.jsp";
 	}
 	
@@ -54,7 +56,7 @@ public class PaperController {
 	
 	//根据Id查找文章
 	@RequestMapping(value="blog/findPaperById")
-	public String findPaperById(HttpServletRequest request, String id) {
+	public String findPaperById(HttpServletRequest request, @RequestParam(value="id") String id) {
 		
 		String content = paperService.findPaperById(id);
 		

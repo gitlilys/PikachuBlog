@@ -6,6 +6,7 @@ public class Paper {
 
 	String blog_id;
 	String blog_user;
+	String blog_title;
 	String blog_content;
 	String blog_comment;
 	Date blog_createtime;
@@ -22,6 +23,12 @@ public class Paper {
 	}
 	public void setBlog_user(String blog_user) {
 		this.blog_user = blog_user;
+	}
+	public String getBlog_title() {
+		return blog_title;
+	}
+	public void setBlog_title(String blog_title) {
+		this.blog_title = blog_title;
 	}
 	public String getBlog_content() {
 		return blog_content;
