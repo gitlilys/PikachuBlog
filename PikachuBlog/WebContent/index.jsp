@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -85,64 +87,10 @@
 		</div>
 		</div><!--轮播图结束-->
 		
-		<!--文章部分-->
-		<div id="main_container">
-			<div id="main_container_01" class="article">
-				<div class="main_container_top">
-					<span>文&nbsp;章&nbsp;显&nbsp;示</span>
-				</div>
-			<div class="main_container_bottom">
-				<a href="#">
-				<div class="main_container_bottom_left">
-					<img src="img/u=1708949714,1776242730&fm=26&gp=0.jpg"/>
-				</div>
-				</a>
-				<div class="main_container_bottom_right">
-					<span>pikachu's blog </span>
-					<br /><br />
-					<span><a href="#" id="a1">read&nbsp;&nbsp;more</a></span>
-				</div>
-			</div>
-			</div><!--第一篇文章结束-->
+		<c:forEach var='i' begin='1' end='${fn:length(list)}'>
+			<a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=1">${list[i-1].blog_title}</a> <br>
+		</c:forEach>
 		
-			<div id="main_container_02" class="article">
-				<div class="main_container_top">
-					<span>新&nbsp;文&nbsp;章</span>
-				</div>
-			<div class="main_container_bottom">
-				<a href="#">
-				<div class="main_container_bottom_left">
-					<img src="img/u=2999562497,3067484911&fm=26&gp=0.jpg"/>
-				</div>
-				</a>
-				<div class="main_container_bottom_right">
-					<span>pikachu's blog </span>
-					<br /><br />
-					<span><a href="#" id="a2">read&nbsp;&nbsp;more</a></span>
-				</div>
-			</div>
-			</div>
-			<div id="main_container_03" class="article">
-				<div class="main_container_top">
-					<span>新&nbsp;文&nbsp;章</span>
-				</div>
-			<div class="main_container_bottom">
-				<a href="#">
-				<div class="main_container_bottom_left">
-					<img src="img/14.jpg">
-				</div>
-				</a>
-				<div class="main_container_bottom_right">
-					<span>pikachu's blog </span>
-					<br /><br />
-					<span><a href="#" id="a3">read&nbsp;&nbsp;more</a></span>
-				</div>
-			</div>
-			</div>
-		
-		
-		</div><!--主体部分结束-->
-		</div>
 	</body>
 	
 </html>

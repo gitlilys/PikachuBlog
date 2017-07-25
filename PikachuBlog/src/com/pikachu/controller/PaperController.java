@@ -42,7 +42,7 @@ public class PaperController {
 	
 	//查询草稿文章
 	@RequestMapping(value="/blog/findCaoGaoPaper")
-	public String findCaoGaoPaper(HttpServletRequest request, @RequestParam("enable") int enable) {
+	public String findCaoGaoPaper(HttpServletRequest request, @RequestParam("enable") int enable, @RequestParam("type") int type) {
 		List<Paper> list = new ArrayList<>();
 		
 		list = paperService.findCaoGao(enable);
@@ -56,6 +56,9 @@ public class PaperController {
 	
 		request.getSession().setAttribute("list", list);
 		
+		if(type == 1)
+			return "redirect:/index.jsp";
+		
 		if(enable == 0)
 			return "redirect:/JSP/user/caogaoList.jsp";
 		else
@@ -64,12 +67,15 @@ public class PaperController {
 	
 	//根据Id查找文章
 	@RequestMapping(value="blog/findPaperById")
-	public String findPaperById(HttpServletRequest request, @RequestParam(value="id") String id) {
+	public String findPaperById(HttpServletRequest request, @RequestParam(value="id") String id, @RequestParam(value="type") int type) {
 		
 		Paper list = paperService.findPaperById(id);
 		
 		request.getSession().setAttribute("content", list);
 		
+		if(type == 1)
+			return "redirect:/JSP/pinglunwenzhang.jsp";
+
 		return "redirect:/JSP/user/chakanWenzhang.jsp";
 	}
 
