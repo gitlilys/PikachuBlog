@@ -23,7 +23,7 @@ public class testController {
 	@Autowired
 	private TestService testService;
 	
-	@RequestMapping(value="/blog/regester")
+	@RequestMapping(value="")
 	public String regester(Test test,HttpServletRequest request){
 			test.setName(request.getParameter("name"));
 			test.setPassword(request.getParameter("password"));

@@ -20,6 +20,16 @@
 	function hideURLbar(){ window.scrollTo(0,1); } 
 </script>
 
+<!-- 验证码 -->
+<script type="text/javascript">  
+    $(function() {  
+        $('#kaptchaImage').click(  
+                function() {  
+                    $(this).hide().attr('src',  
+                            '${pageContext.request.contextPath}/kaptcha.jpg?' + Math.floor(Math.random() * 100)).fadeIn();  
+                });  
+    });  
+</script>
 
 <!--导入css样式文件-->
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" /> 
@@ -54,6 +64,8 @@
 						<a href="#">忘记密码</a>
 						<div class="clear"></div>
 					</div>
+					<input  placeholder="验证码" name="encode" type="text" required="">
+					<img src="${pageContext.request.contextPath}/kaptcha.jpg" id="kaptchaImage" />
 					<input type="submit" value="登录" id="submi">
 				</form>
 			</div>

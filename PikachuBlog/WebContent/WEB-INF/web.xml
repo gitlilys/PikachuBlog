@@ -78,6 +78,17 @@
 			/ckfinder/core/connector/java/connector.java
 		</url-pattern>
 	</servlet-mapping>
+	
+	<!-- 验证码工具 -->	
+	<servlet>  
+        <servlet-name>Kaptcha</servlet-name>  
+        <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>  
+	</servlet>  
+	<servlet-mapping>  
+        <servlet-name>Kaptcha</servlet-name>  
+        <url-pattern>/kaptcha.jpg</url-pattern>  
+	</servlet-mapping>  
+	
 	<filter>
 		<filter-name>FileUploadFilter</filter-name>
 		<filter-class>com.ckfinder.connector.FileUploadFilter</filter-class>
