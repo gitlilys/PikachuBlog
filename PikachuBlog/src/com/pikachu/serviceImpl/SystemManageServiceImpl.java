@@ -18,4 +18,9 @@ public class SystemManageServiceImpl implements SystemManageService {
 		systemMangeDao.addUser(user);
 	}
 
+	@Override
+	public void updateUserEnable(String id, int i) {
+		systemMangeDao.updateUserEnable(id, i);
+	}
+
 }

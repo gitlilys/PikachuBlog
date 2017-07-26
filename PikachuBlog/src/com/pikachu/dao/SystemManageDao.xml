@@ -8,4 +8,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into tb_user values(#{user_id},#{user_name},#{user_password},#{user_role},#{user_cretetime},#{user_enable})
 	</insert>
 	
+	<update id="updateUserEnable">
+		update tb_user set user_enable=#{i,jdbcType=TINYINT} where user_id=#{id,jdbcType=VARCHAR}			
+	</update>
+	
 </mapper> 

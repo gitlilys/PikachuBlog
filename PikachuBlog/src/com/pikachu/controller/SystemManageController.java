@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.pikachu.Utils.BaseUtils;
 import com.pikachu.Utils.MailUtils;
@@ -31,13 +32,17 @@ public class SystemManageController {
 		user.setUser_role(1);
 		user.setUser_enable(0);
 		systemManageService.addUser(user);
-		String url = "http://127.0.0.1:8080/PikachuBlog";
+		String url = "http://127.0.0.1:8080/PikachuBlog/blog/successRegester?id=" + user.getUser_id();
 		MailUtils.sendMail(url, username);
 
 		return "redirect:/JSP/user/userRegester.jsp";
 	}
 	
-	
+	@RequestMapping(value="/blog/successRegester")
+	public String successRegester(HttpServletRequest request, @RequestParam(value="id") String id) {
+		systemManageService.updateUserEnable(id, 1);
+		return "redirect:/JSP/user/SuccessRegester.jsp";
+	}
 	
 	/*@RequestMapping(value="/blog/login") 
 	public String login(HttpServletRequest request) {
@@ -46,7 +51,7 @@ public class SystemManageController {
 		String encode = request.getParameter("encode");
 		if(kaptcha.equals(encode))
 			return "redirect:/JSP/user/userSuccessLogin.jsp";
-		return null;
+		return "";
 	}*/
 
 }
