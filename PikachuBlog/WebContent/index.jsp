@@ -2,6 +2,7 @@
     pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="pg" uri="http://jsptags.com/tags/navigation/pager" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -90,6 +91,31 @@
 		<c:forEach var='i' begin='1' end='${fn:length(list)}'>
 			<a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=1">${list[i-1].blog_title}</a> <br>
 		</c:forEach>
+		
+		<pg:pager items="1001" export="currentPageNumber=pageNumber">
+				<pg:first>
+					<a href="">首页</a>	
+				</pg:first>
+				<pg:prev>
+					<a href="">上一页</a>	
+				</pg:prev>
+				<pg:pages>
+					<c:choose>
+						<c:when test="${currentPageNumber eq pageNumber}">
+							<font color="red">${pageNumber}</font>	
+						</c:when>
+						<c:otherwise>
+							<a href="">${pageNumber}</a>
+						</c:otherwise>	
+					</c:choose>
+				</pg:pages>
+				<pg:next>
+					<a href="">下一页</a>	
+				</pg:next>
+				<pg:last>
+					<a href="">尾页</a>		
+				</pg:last>
+		</pg:pager>
 		
 	</body>
 	

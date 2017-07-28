@@ -16,6 +16,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from tb_user where user_name=#{user_name}	
 	</select>
 	
+	<!-- <resultMap id="UserMap" type="com.pikachu.domain.User">
+		<id column="user_id" property="user_id" />
+		<result column="user_name" property="user_name" />
+		<result column="user_password" property="user_password" />
+		<result column="user_role" property="user_role" />
+		<result column="user_creatime" property="user_creatime" />
+		<result column="user_enable" property="user_enable" />
+	</resultMap> -->
+	
 	<select id="getAllUser" resultType="User">
 		select * from tb_user	
 	</select>

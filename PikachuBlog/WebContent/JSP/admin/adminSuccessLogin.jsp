@@ -10,7 +10,7 @@
 			<frame src="left.jsp"/>
 			<frameset rows="15%,*">
 				<frame src="top.jsp" />
-				<frame  src="adminGuanli.jsp" name="right" />
+				<frame  src="${pageContext.request.contextPath}/blog/adminGetUser" name="right" />
 			</frameset>
 	</frameset>
 </html>

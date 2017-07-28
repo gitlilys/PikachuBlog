@@ -20,7 +20,7 @@ public class AdminManagementServiceImpl implements AdminManagementService {
 	public List<User> getAllUser() {
 		List<User> list = new ArrayList<>();
 		list = systemManageDao.getAllUser();
-		return null;
+		return list;
 	}
 
 }

@@ -50,7 +50,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				<c:forEach var='i' begin='1' end='${fn:length(list)}'>
+				<c:forEach var='i' begin='0' end='${fn:length(list)-1}'>
 					<tr>
 						<td>${list[i].user_name}</td>
 						<td>${list[i].user_role}</td>

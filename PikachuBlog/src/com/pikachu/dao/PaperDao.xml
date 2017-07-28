@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.pikachu.dao.PaperDao">
 	
 	<insert id="save" parameterType="com.pikachu.domain.Paper">
-		insert into tb_blog values(#{blog_id},#{blog_user},#{blog_title},#{blog_content},#{blog_comment},#{blog_createtime},#{blog_enable})
+		insert into tb_blog values(#{blog_id},#{blog_user},#{blog_title},#{blog_content},#{blog_createtime},#{blog_enable})
 	</insert>
 
 	<resultMap id="PaperMap" type="com.pikachu.domain.Paper">
@@ -13,7 +13,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="blog_user" property="blog_user" />
 		<result column="blog_title" property="blog_title" />
 		<result column="blog_content" property="blog_content" />
-		<result column="blog_comment" property="blog_comment" />
 		<result column="blog_createtime" property="blog_createtime" />
 		<result column="blog_enable" property="blog_enable" />
 	</resultMap>
