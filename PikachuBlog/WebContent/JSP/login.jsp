@@ -54,17 +54,17 @@
 			
 			<div class="sub-main-w3">
 				<!--登录成功进入到成功页面-->
-				<form action="#" method="get">
-					<input placeholder="邮箱" name="email" type="email" required="">
+				<form action="${pageContext.request.contextPath}/blog/login" method="post">
+					<input placeholder="邮箱" id="name" name="name" type="email" required="">${ERROR1}
 					<span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
-					<input  placeholder="密码" name="Password" type="password" required="">
+					<input  placeholder="密码" id="password" name="password" type="password" required="">${ERROR2}
 					<span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
 					<div class="rem-w3">
 						<span class="check-w3"><input type="checkbox" />记住密码</span>
 						<a href="#">忘记密码</a>
 						<div class="clear"></div>
 					</div>
-					<input  placeholder="验证码" name="encode" type="text" required="">
+					<input  placeholder="验证码" name="encode" type="text" required="">${ERROR3}
 					<img src="${pageContext.request.contextPath}/kaptcha.jpg" id="kaptchaImage" />
 					<input type="submit" value="登录" id="submi">
 				</form>

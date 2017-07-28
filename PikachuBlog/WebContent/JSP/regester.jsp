@@ -45,7 +45,7 @@
 			<div class="sub-main-w3">
 				<form action="${pageContext.request.contextPath}/blog/regester" method="post">
 					<input placeholder="邮箱" id="name" name="name" type="email" required="">
-					<input  placeholder="密码" id="password" name="Password" type="password" required="">
+					<input  placeholder="密码" id="password" name="password" type="password" required="">
 					<input  placeholder="确认密码" id="rqpassword" name="AgainPassword" type="password" required="">
 					<input type="submit" value="注册" id="submi">
 				</form>

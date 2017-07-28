@@ -27,19 +27,19 @@
 					
 					<div class="c1">
 						<span>用户名：</span>
-						<input type="text" name="username" value="***"/>
+						<input type="text" name="username" value=${NOWUSER.user_name} />
 					</div>
 					<div class="c1">
 						<span>昵称：&nbsp;&nbsp;&nbsp;</span>
-						<input type="text" name="nickname" value="***"/>
+						<input type="text" name="nickname" />
 					</div>
 					<div class="c1">
 						<span>QQ号：&nbsp;</span>
-						<input type="text" name="qq" value="***"/>
+						<input type="text" name="qq" />
 					</div>
 					<div class="c1">
 						<span>备注：&nbsp;&nbsp;</span>
-						<input type="text" name="remark" value="***"/>
+						<input type="text" name="remark" /> 
 					</div>
 				</div>
 			</div>

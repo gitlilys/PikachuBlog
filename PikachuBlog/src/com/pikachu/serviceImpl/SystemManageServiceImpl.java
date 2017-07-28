@@ -23,4 +23,11 @@ public class SystemManageServiceImpl implements SystemManageService {
 		systemMangeDao.updateUserEnable(id, i);
 	}
 
+	@Override
+	public User findUserByName(String name) {
+		User user = new User();
+		user = systemMangeDao.findUserByName(name);
+		return user;
+	}
+
 }

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -38,49 +40,26 @@
 	</script>
 	<body>
 		<div class="main">
-			<form action="#" method="post">
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>账户名</th>
 						<th>身份</th>
-						<th>昵称</th>
 						<th>状态</th>
 						<th>禁止登陆</th>
 					</tr>
 				</thead>
 				<tbody>
+				<c:forEach var='i' begin='1' end='${fn:length(list)}'>
 					<tr>
-						<td>**</td>
-						<td>**</td>
-						<td>**</td>
-						<td>**</td>
+						<td>${list[i].user_name}</td>
+						<td>${list[i].user_role}</td>
+						<td>${list[i].user_enable}</td>
 						<td><input type="checkbox" name="enable" /></td>
 					</tr>
-					<tr>
-						<td>**</td>
-						<td>**</td>
-						<td>**</td>
-						<td>**</td>
-						<td><input type="checkbox" name="enable" /></td>
-					</tr>
-					<tr>
-						<td>**</td>
-						<td>**</td>
-						<td>**</td>
-						<td>**</td>
-						<td><input type="checkbox" name="enable" /></td>
-					</tr>
-					<tr>
-						<td>**</td>
-						<td>**</td>
-						<td>**</td>
-						<td>**</td>
-						<td><input type="checkbox" name="enable" /></td>
-					</tr>
+				</c:forEach>
 				</tbody>
 			</table>
-			</form>
 		</div>
 	</body>
 </html>

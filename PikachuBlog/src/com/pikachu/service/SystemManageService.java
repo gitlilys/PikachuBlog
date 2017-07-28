@@ -8,4 +8,6 @@ public interface SystemManageService {
 
 	public void updateUserEnable(String id, int i);
 
+	public User findUserByName(String name);
+
 }

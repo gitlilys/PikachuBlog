@@ -29,7 +29,7 @@
 			<div class="col-md-3">
 				<img src="../../img/u=1708949714,1776242730&fm=26&gp=0.jpg" class="img-circle" width="50px" height="50px">
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<span>用户：***</span>
+				<span>用户：</span>
 			</div>
 		</div>
 	</body>

@@ -12,4 +12,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		update tb_user set user_enable=#{i,jdbcType=TINYINT} where user_id=#{id,jdbcType=VARCHAR}			
 	</update>
 	
+	<select id="findUserByName" parameterType="String" resultType="User">
+		select * from tb_user where user_name=#{user_name}	
+	</select>
+	
+	<select id="getAllUser" resultType="User">
+		select * from tb_user	
+	</select>
+	
 </mapper> 

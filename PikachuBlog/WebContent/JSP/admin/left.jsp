@@ -96,23 +96,11 @@
 				</div>
 				<div class="tb" id="tb1">
 					<ul>
-						<li id="tb11"><a href="adminGuanli.jsp" target="right"><span>用户管理</span></a></li>
+						<li id="tb11"><a href="${pageContext.request.contextPath}/blog/adminGetUser" target="right"><span>用户管理</span></a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="t1">
-				<div class="th" id="th2">
-					<img src="../img/u4_selected.png"/>
-					<span>审核</span>
-				</div>
-				<div class="tb" id="tb2">
-					<ul>
-						<li><a href="pinglunShenghe.jsp" target="right"><span>评论审核</span></a></li>
-						<li><a href="paperShenghe.jsp" target="right"><span>文章审核</span></a></li>
-						<li><a href="fileShenghe.jsp" target="right"><span>文件审核</span></a></li>
-					</ul>
-				</div>
-			</div>
+			
 		</div>
 	</body>
 </html>
