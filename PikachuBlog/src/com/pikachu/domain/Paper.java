@@ -2,15 +2,18 @@ package com.pikachu.domain;
 
 import java.util.Date;
 
+/**
+ * 文章实体类 
+ *
+ */
 public class Paper {
 
-	String blog_id;
-	String blog_user;
-	String blog_title;
-	String blog_content;
-	String blog_comment;
-	Date blog_createtime;
-	int blog_enable;
+	String blog_id; //id
+	String blog_user; //用户
+	String blog_title; //文章标题
+	String blog_content; //文章内容
+	Date blog_createtime; //创建时间
+	int blog_enable; //是否发布
 	
 	public String getBlog_id() {
 		return blog_id;
@@ -35,12 +38,6 @@ public class Paper {
 	}
 	public void setBlog_content(String blog_content) {
 		this.blog_content = blog_content;
-	}
-	public String getBlog_comment() {
-		return blog_comment;
-	}
-	public void setBlog_comment(String blog_comment) {
-		this.blog_comment = blog_comment;
 	}
 	public Date getBlog_createtime() {
 		return blog_createtime;

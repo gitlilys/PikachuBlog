@@ -1,9 +1,13 @@
 package com.pikachu.domain;
 
+/**
+ * 测试实体类 
+ *
+ */
 public class Test {
-	private int id;
-	private String name;
-	private String password;
+	private int id; //id
+	private String name; //名字
+	private String password; //密码
 	public int getId() {
 		return id;
 	}

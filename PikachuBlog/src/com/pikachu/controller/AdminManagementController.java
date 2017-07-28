@@ -19,6 +19,11 @@ public class AdminManagementController {
 	@Autowired
 	private AdminManagementService adminManagementService;
 
+	/**
+	 * 获得所有用户
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value="/blog/adminGetUser") 
 	public String adminGetUser(HttpServletRequest request) {
 		List<User> list = new ArrayList<>();

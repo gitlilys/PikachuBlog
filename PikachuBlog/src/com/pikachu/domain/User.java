@@ -2,14 +2,18 @@ package com.pikachu.domain;
 
 import java.util.Date;
 
+/**
+ * 用户实体类 
+ *
+ */
 public class User {
 
-	String user_id;
-	String user_name;
-	String user_password;
-	int user_role;
-	Date user_cretetime;
-	int user_enable;
+	String user_id; //用户id
+	String user_name; //用户名
+	String user_password; //用户密码
+	int user_role; //用户角色
+	Date user_cretetime; //创建时间
+	int user_enable; //是否生效
 	
 	public String getUser_id() {
 		return user_id;

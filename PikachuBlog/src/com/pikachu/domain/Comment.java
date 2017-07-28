@@ -2,12 +2,16 @@ package com.pikachu.domain;
 
 import java.util.Date;
 
+/**
+ *	评论实体类 
+ *
+ */
 public class Comment {
 
-	String comment_id;
-	String comment_paperid;
-	String comment_content;
-	Date comment_time;
+	String comment_id; //id
+	String comment_paperid; //文章id
+	String comment_content; //评论内容
+	Date comment_time; //创建时间
 	
 	public String getComment_id() {
 		return comment_id;

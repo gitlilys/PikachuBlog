@@ -23,6 +23,12 @@ public class SystemManageController {
 	@Autowired
 	private SystemManageService systemManageService;
 
+	/**
+	 * 用户注册
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	@RequestMapping(value="/blog/regester")
 	public String regester(HttpServletRequest request, HttpServletResponse response){
 		User user = new User();
@@ -40,12 +46,24 @@ public class SystemManageController {
 		return "redirect:/JSP/user/userRegester.jsp";
 	}
 	
+	/**
+	 * 注册验证
+	 * @param request
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping(value="/blog/successRegester")
 	public String successRegester(HttpServletRequest request, @RequestParam(value="id") String id) {
 		systemManageService.updateUserEnable(id, 1);
 		return "redirect:/JSP/user/SuccessRegester.jsp";
 	}
 	
+	/**
+	 * 用户登录
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	@RequestMapping(value="/blog/login") 
 	public String login(HttpServletRequest request, HttpServletResponse response) {
 		String kaptcha = (String)request.getSession()  
@@ -72,5 +90,5 @@ public class SystemManageController {
 		}
 		return "forward:/JSP/login.jsp";
 	}
-
+	
 }

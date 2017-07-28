@@ -23,6 +23,12 @@ public class testController {
 	@Autowired
 	private TestService testService;
 	
+	/**
+	 * 测试框架
+	 * @param test
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value="")
 	public String regester(Test test,HttpServletRequest request){
 			test.setName(request.getParameter("name"));

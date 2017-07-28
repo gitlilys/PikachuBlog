@@ -21,6 +21,12 @@ public class CommentController {
 	@Autowired
 	private CommentService commentService;
 	
+	/**
+	 * 新增评论
+	 * @param request
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping(value="/blog/addComment") 
 	public String addComment(HttpServletRequest request, @RequestParam(value="id") String id) {
 		String comment = request.getParameter("cmt");
@@ -37,6 +43,10 @@ public class CommentController {
 		return "redirect:/JSP/pinglunList.jsp";
 	}
 
+	/**
+	 * 得到文章的所有评论  
+	 * @param id
+	 */
 	@RequestMapping(value="/blog/findCommentByPaperId") 
 	public void findCommentByPaperId(@RequestParam(value="id") String id) {
 		List<Comment> list = new ArrayList<>();

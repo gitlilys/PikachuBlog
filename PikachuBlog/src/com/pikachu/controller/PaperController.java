@@ -21,6 +21,11 @@ public class PaperController {
 	@Autowired
 	private PaperService paperService;
 
+	/**
+	 * 保存文章
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value="/blog/savePaper")
 	public String savePaper(HttpServletRequest request) {
 		Paper paper = new Paper();
@@ -40,7 +45,13 @@ public class PaperController {
 		return "redirect:/JSP/user/wenzhangGuanli.jsp";
 	}
 	
-	//查询草稿文章
+	/**
+	 * 查询所有文章
+	 * @param request
+	 * @param enable
+	 * @param type
+	 * @return
+	 */
 	@RequestMapping(value="/blog/findCaoGaoPaper")
 	public String findCaoGaoPaper(HttpServletRequest request, @RequestParam("enable") int enable, @RequestParam("type") int type) {
 		List<Paper> list = new ArrayList<>();
@@ -65,7 +76,13 @@ public class PaperController {
 			return "redirect:/JSP/user/wenzhangGuanliList.jsp";
 	}
 	
-	//根据Id查找文章
+	/**
+	 * 根据文章id查找文章
+	 * @param request
+	 * @param id
+	 * @param type
+	 * @return
+	 */
 	@RequestMapping(value="blog/findPaperById")
 	public String findPaperById(HttpServletRequest request, @RequestParam(value="id") String id, @RequestParam(value="type") int type) {
 		

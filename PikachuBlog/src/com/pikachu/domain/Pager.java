@@ -2,6 +2,11 @@ package com.pikachu.domain;
 
 import java.util.List;
 
+/**
+ * 分页实体类 
+ *
+ * @param <E>
+ */
 public class Pager<E> {
 	private int pageSize; //每页显示多少条
 	private int pageOffset; //分页的开始值
