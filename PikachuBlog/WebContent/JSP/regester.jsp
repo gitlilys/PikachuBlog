@@ -43,14 +43,28 @@
 			</div>
 			
 			<div class="sub-main-w3">
-				<form action="${pageContext.request.contextPath}/blog/regester" method="post">
+				<form action="${pageContext.request.contextPath}/blog/regester" method="post" onsubmit="return isValid(this);" >
 					<input placeholder="邮箱" id="name" name="name" type="email" required="">
 					<input  placeholder="密码" id="password" name="password" type="password" required="">
-					<input  placeholder="确认密码" id="rqpassword" name="AgainPassword" type="password" required="">
+					<input  placeholder="确认密码" id="rqpassword" name="rqpassword" type="password" required="">
 					<input type="submit" value="注册" id="submi">
 				</form>
 			</div>
 		</div>
+		<script type="text/javascript">
+			function isValid(form) {
+				if(form.password.value.length < 3) {
+					alert("密码不能小于六位数");
+					return false;
+				} 
+				else if(form.password.value != form.rqpassword.value) {
+					alert("密码不一致");	
+					return false;
+				} else {
+					return true;
+				}
+			}	
+		</script>
 		<!--footer-->
 		<div class="footer">
 			<p>&copy; 2017 Pikachu. All rights reserved | Design by <a href="#">Pikachu</a></p>

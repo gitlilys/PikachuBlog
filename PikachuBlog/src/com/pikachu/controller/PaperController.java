@@ -2,6 +2,7 @@ package com.pikachu.controller;
 
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,14 +28,15 @@ public class PaperController {
 	 * @return
 	 */
 	@RequestMapping(value="/blog/savePaper")
-	public String savePaper(HttpServletRequest request) {
+	public String savePaper(HttpServletRequest request, @RequestParam("name") String name) {
 		Paper paper = new Paper();
 		String content = request.getParameter("myeditor");
 		String title = request.getParameter("title");
 		paper.setBlog_id(BaseUtils.getUUID());
-		paper.setBlog_user("ha");
+		paper.setBlog_user(name);
 		paper.setBlog_title(title);
 		paper.setBlog_content(content);
+		paper.setBlog_createtime(new Date());
 		if(request.getParameter("submit").equals("保存")) {
 			paper.setBlog_enable(0);
 		} else {

@@ -2,6 +2,7 @@
     pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -31,7 +32,7 @@
 			<tr>
 				<td>${i}</td>
 				<td><a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=0">${list[i-1].blog_title}</a> </td>
-				<td>${list[i-1].blog_createtime}</td>
+				<td><fmt:formatDate value="${list[i-1].blog_createtime}" pattern="yyyy-MM-dd hh:mm"/> </td>
 				<td><button id="btn${i}" type="button" class="btn btn-success">删除</button></td>
 			</tr>
 		</tbody>

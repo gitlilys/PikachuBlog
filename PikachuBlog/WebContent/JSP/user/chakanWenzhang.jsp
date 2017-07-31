@@ -10,6 +10,10 @@
 	<body>
 	标题:&nbsp;<textarea rows="1" cols="50">${content.blog_title}</textarea>
 	<textarea id="myeditor" name="myeditor" rows="5" cols="60">${content.blog_content}</textarea>
+	<form action="${pageContext.request.contextPath}/blog/addComment?id=${paperId}" method="post">
+		<textarea id="cmt" name="cmt" rows="7" cols="120" style="resize: none"></textarea> <br>
+		<input type="submit" id="comment" style="margin-left: 780px;" value="评论">
+	</form>
 
 	<script type="text/javascript">
 		window.onload=function() {
