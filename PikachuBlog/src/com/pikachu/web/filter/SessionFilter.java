@@ -19,7 +19,10 @@ public class SessionFilter extends OncePerRequestFilter {
 		String[] notFilter = new String[] {
 				"login.jsp",
 				"regester.jsp",
-				"wangjimima.jsp"
+				"wangjimima.jsp",
+				"pinglun.jsp",
+				"pinglunwenzhang.jsp",
+				"pinglunList.jsp"
 		};
 		
 		String uri = request.getRequestURI();
