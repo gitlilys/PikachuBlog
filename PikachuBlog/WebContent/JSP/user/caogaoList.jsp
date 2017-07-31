@@ -38,7 +38,7 @@
 				<td><fmt:formatDate value="${listUser[i-1].blog_createtime}" pattern="yyyy-MM-dd hh:mm"/> </td>
 				<td>
 				<form action="${pageContext.request.contextPath}/blog/deletePaperById?id=${listUser[i-1].blog_id}&type=0" method="post">
-					<input type="button" class="btn btn-success" value="删除">
+					<button type="submit"  class="btn btn-success">删除</button>
 				</form>
 				</td>
 

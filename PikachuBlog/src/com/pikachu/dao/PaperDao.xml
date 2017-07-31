@@ -33,7 +33,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>	
 	
 	<delete id="deletePaperById" parameterType="java.lang.String" >
-		delete from tb_blog where id=#{blog_id}						
+		delete from tb_blog where blog_id=#{blog_id}						
 	</delete>
 	
 	<select id="findPaperByUser"  resultType="Paper" >

@@ -16,6 +16,7 @@
 	</head>
 	<body>
 		<br><br>
+		${listUser[0].blog_id}
 		<div class="container"> 
  		<table style="width: 1000px;" class="table table-striped table-hover table-bordered"> 
  		<thead>
@@ -35,7 +36,7 @@
 				<td><fmt:formatDate value="${listUser[i-1].blog_createtime}" pattern="yyyy-MM-dd hh:mm"/> </td>
 				<td>
 				<form action="${pageContext.request.contextPath}/blog/deletePaperById?id=${listUser[i-1].blog_id}&type=1" method="post">
-					<input type="button" class="btn btn-success" value="删除" />
+					<button type="submit"  class="btn btn-success">删除</button>
 				</form>
 				</td>
 			</tr>
@@ -43,5 +44,6 @@
 		</c:forEach>
 		</table>
 		</div>
+
 	</body>
 </html>
