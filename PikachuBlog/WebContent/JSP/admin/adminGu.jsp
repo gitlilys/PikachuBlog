@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			window.location="${pageContext.request.contextPath}/blog//blog/adminGetUser"	
+			window.location="${pageContext.request.contextPath}/blog/adminGetUser"	
 		</script>
 	</body>
 </html>
