@@ -32,17 +32,15 @@
 			<!--logo部分-->
 			<div class="row" id="logo">
 				<div class="col-lg-10 col-md-10 col-sm-6 col-xs-6" id="logo1" >
-					<span>PIPACHU'S&nbsp;&nbsp;&nbsp;BLOG</span>
+					<span><h1><font size="14">PIKACHU&nbsp;&nbsp;&nbsp;BLOG</font></h1></span>  
 				</div>
-				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-					<div id="regist" class="col-md-6 col-sm-6 col-xs-6 head">
-						<a href="JSP/regester.jsp"><span>注册</span></a> 	
-					</div>
-					<div id="login" class="col-md-6 col-sm-6 col-xs-6 head">
-						<a href="JSP/login.jsp"><span>登录</span></a>
-					</div>
+				<div> 
+						<br><br>
+						<a href="JSP/regester.jsp"><span class="glyphicon glyphicon-user"></span>注册 &nbsp;&nbsp;&nbsp;
+						<a href="JSP/login.jsp"><span class="glyphicon glyphicon-user"></span> 登录		
+				</div>
+			</div>
 
-				</div>
 			</div><!--logo部分结束-->
                   
 			<!--主体部分,包括轮播图和文章-->

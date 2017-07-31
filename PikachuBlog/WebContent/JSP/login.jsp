@@ -61,7 +61,7 @@
 					<span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
 					<div class="rem-w3">
 						<span class="check-w3"><input type="checkbox" />记住密码</span>
-						<a href="#">忘记密码</a>
+						<a href="./wangjimima.jsp">忘记密码</a>
 						<div class="clear"></div>
 					</div>
 					<input  placeholder="验证码" name="encode" type="text" required="">${ERROR3}
