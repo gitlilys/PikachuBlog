@@ -32,5 +32,10 @@ public class PaperServiceImpl implements PaperService {
 		Paper content = paperDao.findPaperById(id);
 		return content;
 	}
+
+	@Override
+	public void deletePaperById(String id) {
+		paperDao.deletePaperById(id);
+	}
 	
 }

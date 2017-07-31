@@ -86,14 +86,32 @@ public class PaperController {
 	 * @return
 	 */
 	@RequestMapping(value="blog/findPaperById")
-	public String findPaperById(HttpServletRequest request, @RequestParam(value="id") String id) {
+	public String findPaperById(HttpServletRequest request, @RequestParam(value="id") String id, @RequestParam(value="type") int type) {
 		
 		Paper list = paperService.findPaperById(id);
 		
-		request.getSession().setAttribute("paperId", id);
+//		request.getSession().setAttribute("paperId", id);
 		request.getSession().setAttribute("content", list);
 		
+		if(type == 0)
+			return "redirect:/JSP/user/chakanwenzhang.jsp";
 		return "redirect:/JSP/pinglun.jsp";
+	}
+	
+	/**
+	 * 删除文章
+	 * @param request
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping(value="blog/deletePaperById")
+	public String deletePaperById(HttpServletRequest request, @RequestParam(value="id") String id, @RequestParam(value="type") int type) {
+		paperService.deletePaperById(id);
+		
+		if(type == 1)
+			return "redirect:/JSP/user/wenzhangGuanli.jsp";
+		else
+			return "redirect:/JSP/user/caogao.jsp";
 	}
 
 }

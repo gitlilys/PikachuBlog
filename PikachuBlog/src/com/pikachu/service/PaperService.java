@@ -12,4 +12,6 @@ public interface PaperService {
 
 	public Paper findPaperById(String id);
 
+	public void deletePaperById(String id);
+
 }

@@ -11,5 +11,7 @@ public interface PaperDao {
 	public List<Paper> findCaoGao(int enable);
 
 	public Paper findPaperById(String id);
+
+	public void deletePaperById(String id);
 		
 }

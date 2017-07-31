@@ -12,8 +12,8 @@
 	<body>
 	标题:&nbsp;<textarea rows="1" cols="50" readonly="readonly" style="resize: none">${content.blog_title}</textarea>
 	<textarea id="myeditor" name="myeditor" rows="5" cols="60" readonly="readonly" >${content.blog_content}</textarea> <br><br>
-	<c:forEach var='i' begin='0' end='${fn:length(commentList)-1}'>
-		[用户${commentList[i].comment_user}]: ${commentList[i].comment_content} <br>
+	<c:forEach var='i' begin='1' end='${fn:length(commentList)}'>
+		[用户${commentList[i-1].comment_user}]: ${commentList[i-1].comment_content} <br>
 	</c:forEach>
 	<script type="text/javascript">
 		window.onload=function() {

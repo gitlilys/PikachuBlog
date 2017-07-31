@@ -21,13 +21,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from tb_blog where blog_enable=#{blog_enable}	
 	</select>	
 	
-<!-- 	<resultMap id="FindMap" type="java.lang.String">
+<!-- 
+	<resultMap id="FindMap" type="java.lang.String">
 		<result column="blog_title" property="blog_title" />
 		<result column="blog_content" property="blog_content" />
 	</resultMap>	
- -->
+-->
+
 	<select id="findPaperById" parameterType="java.lang.String" resultType="Paper">
-		select blog_title,blog_content from tb_blog where blog_id=#{blog_id}	
+		select * from tb_blog where blog_id=#{blog_id}	
 	</select>	
+	
+	<delete id="deletePaperById" parameterType="java.lang.String" >
+		delete from tb_blog where id=#{blog_id}						
+	</delete>
 	
 </mapper> 

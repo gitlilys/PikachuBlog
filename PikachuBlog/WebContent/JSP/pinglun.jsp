@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			window.location="${pageContext.request.contextPath}/blog/findCommentByPaperId?id=${paperId}"	
+			window.location="${pageContext.request.contextPath}/blog/findCommentByPaperId?id=${content.blog_id}"	
 		</script>
 	</body>
 </html>

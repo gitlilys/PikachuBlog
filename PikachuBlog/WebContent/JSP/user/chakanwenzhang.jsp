@@ -6,26 +6,16 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="../../ckeditor/ckeditor.js"></script>
 		<title>查看文章</title>
 	</head>
 	<body>
 	标题:&nbsp;<textarea rows="1" cols="50" readonly="readonly" style="resize: none">${content.blog_title}</textarea>
 	<textarea id="myeditor" name="myeditor" rows="5" cols="60" readonly="readonly" >${content.blog_content}</textarea> <br><br>
-	<c:forEach var='i' begin='1' end='${fn:length(commentList)}'>
-		[用户${commentList[i-1].comment_user}]: ${commentList[i-1].comment_content} <br>
-	</c:forEach>
-	<br>
-	<form action="${pageContext.request.contextPath}/blog/addComment?id=${paperId}" method="post">
-		<textarea id="cmt" name="cmt" rows="7" cols="120" style="resize: none"></textarea> <br>
-		<input type="submit" id="comment" style="margin-left: 780px;" value="评论">
-	</form>
-
 	<script type="text/javascript">
 		window.onload=function() {
 			CKEDITOR.replace('myeditor');	
 		}
 	</script>
-	
 	</body>
 </html>
