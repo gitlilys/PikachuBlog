@@ -48,6 +48,8 @@ CKEDITOR.editorConfig = function( config ) {
 	config.filebrowserImageUploadUrl ='../../ckfinder/core/connector/java/connector.java?command=QuickUpload&type=Images';
 
 	config.filebrowserFlashUploadUrl ='../../ckfinder/core/connector/java/connector.java?command=QuickUpload&type=Flash';
+	
+	config.image_previewText="/PikachuBlog/ckeditor/plugins/image/dialogs/image.js";
 
 	// 设置宽高
 	config.width = 1100;

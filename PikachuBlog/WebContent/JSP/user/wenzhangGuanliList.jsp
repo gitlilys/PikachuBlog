@@ -16,7 +16,6 @@
 	</head>
 	<body>
 		<br><br>
-		${listUser[0].blog_id}
 		<div class="container"> 
  		<table style="width: 1000px;" class="table table-striped table-hover table-bordered"> 
  		<thead>
