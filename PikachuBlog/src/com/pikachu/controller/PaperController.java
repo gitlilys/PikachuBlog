@@ -86,17 +86,14 @@ public class PaperController {
 	 * @return
 	 */
 	@RequestMapping(value="blog/findPaperById")
-	public String findPaperById(HttpServletRequest request, @RequestParam(value="id") String id, @RequestParam(value="type") int type) {
+	public String findPaperById(HttpServletRequest request, @RequestParam(value="id") String id) {
 		
 		Paper list = paperService.findPaperById(id);
 		
 		request.getSession().setAttribute("paperId", id);
 		request.getSession().setAttribute("content", list);
 		
-		if(type == 1)
-			return "redirect:/JSP/pinglunwenzhang.jsp";
-
-		return "redirect:/JSP/user/chakanWenzhang.jsp";
+		return "redirect:/JSP/pinglun.jsp";
 	}
 
 }

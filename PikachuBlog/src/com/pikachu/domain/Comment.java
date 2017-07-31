@@ -10,6 +10,7 @@ public class Comment {
 
 	String comment_id; //id
 	String comment_paperid; //文章id
+	String comment_user; //评论人
 	String comment_content; //评论内容
 	Date comment_time; //创建时间
 	
@@ -18,6 +19,12 @@ public class Comment {
 	}
 	public void setComment_id(String comment_id) {
 		this.comment_id = comment_id;
+	}
+	public String getComment_user() {
+		return comment_user;
+	}
+	public void setComment_user(String comment_user) {
+		this.comment_user = comment_user;
 	}
 	public String getComment_paperid() {
 		return comment_paperid;

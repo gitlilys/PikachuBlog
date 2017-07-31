@@ -114,7 +114,7 @@
 		<tbody>
 			<tr>
 				<td>${i}</td>
-				<td><a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=1">${list[i-1].blog_title}</a></td>
+				<td><a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}">${list[i-1].blog_title}</a></td>
 				<td>${list[i-1].blog_user}</td>
 				<td><fmt:formatDate value="${list[i-1].blog_createtime}" pattern="yyyy-MM-dd hh:mm"/> </td>
 			</tr>

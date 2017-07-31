@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.pikachu.dao.CommentDao">
 	
 	<insert id="addComment" parameterType="Comment">
-		insert into tb_comment values(#{comment_id},#{comment_paperid},#{comment_content},#{comment_time})
+		insert into tb_comment values(#{comment_id},#{comment_paperid},#{comment_user},#{comment_content},#{comment_time})
 	</insert>
 	
 	<select id="findCommentByPaperId" parameterType="java.lang.String" resultType="Comment" >

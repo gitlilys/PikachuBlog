@@ -33,6 +33,7 @@ public class CommentController {
 		Comment cmt = new Comment();
 		cmt.setComment_id(BaseUtils.getUUID());
 		cmt.setComment_paperid(id);
+		cmt.setComment_user("user");
 		cmt.setComment_content(comment);
 		commentService.addComment(cmt);
 		List<Comment> list = new ArrayList<>();
@@ -48,9 +49,11 @@ public class CommentController {
 	 * @param id
 	 */
 	@RequestMapping(value="/blog/findCommentByPaperId") 
-	public void findCommentByPaperId(@RequestParam(value="id") String id) {
+	public String findCommentByPaperId(HttpServletRequest request, @RequestParam(value="id") String id) {
 		List<Comment> list = new ArrayList<>();
 		list = commentService.findCommentByPaperId(id);
+		request.getSession().setAttribute("commentList", list);
+		return "redirect:/JSP/pinglunwenzhang.jsp";
 	}
 	
 }
