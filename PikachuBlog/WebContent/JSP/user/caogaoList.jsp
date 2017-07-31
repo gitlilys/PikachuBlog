@@ -30,14 +30,14 @@
  			</tr>	
  		</thead>
  		
-		<c:forEach var='i' begin='1' end='${fn:length(list)}'>
+		<c:forEach var='i' begin='1' end='${fn:length(listUser)}'>
 		<tbody>
 			<tr>
 				<td>${i}</td>
-                <td><a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=0">${list[i-1].blog_title}</a></td> 
-				<td><fmt:formatDate value="${list[i-1].blog_createtime}" pattern="yyyy-MM-dd hh:mm"/> </td>
+                <td><a href="${pageContext.request.contextPath}/blog/findPaperById?id=${listUser[i-1].blog_id}&type=0">${listUser[i-1].blog_title}</a></td> 
+				<td><fmt:formatDate value="${listUser[i-1].blog_createtime}" pattern="yyyy-MM-dd hh:mm"/> </td>
 				<td>
-				<form action="${pageContext.request.contextPath}/blog/deletePaperById?id=${list[i-1].blog_id}&type=0" method="post">
+				<form action="${pageContext.request.contextPath}/blog/deletePaperById?id=${listUser[i-1].blog_id}&type=0" method="post">
 					<input type="button" class="btn btn-success" value="删除">
 				</form>
 				</td>

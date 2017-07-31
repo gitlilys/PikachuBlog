@@ -14,4 +14,6 @@ public interface PaperService {
 
 	public void deletePaperById(String id);
 
+	public List<Paper> findPaperByUser(String userId, int enable);
+
 }

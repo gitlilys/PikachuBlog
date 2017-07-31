@@ -36,4 +36,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		delete from tb_blog where id=#{blog_id}						
 	</delete>
 	
+	<select id="findPaperByUser"  resultType="Paper" >
+		select * from tb_blog where blog_enable=#{enable} and blog_user=#{userId}
+	</select>
+	
 </mapper> 

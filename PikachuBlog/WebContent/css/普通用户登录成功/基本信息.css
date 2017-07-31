@@ -1,5 +1,5 @@
 body{
-		background-color: rgba(5,255,255,0.9);
+		background-color: rgba(255,255,255,0.9);
 	}
 	#total{
 		margin: 0 auto;
@@ -22,7 +22,7 @@ body{
 		text-align: center;
 	}
 	#t1 > span{
-		color: #EEDD82;
+		color: #ff8040;
 		font-size: 30px;
 	}
 	

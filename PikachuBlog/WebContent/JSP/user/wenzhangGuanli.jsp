@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			window.location="${pageContext.request.contextPath}/blog/findCaoGaoPaper?enable=1&type=0"	
+			window.location="${pageContext.request.contextPath}/blog/findPaperByUser?userId=${NOWUSER.user_name}&enable=1"	
 		</script>
 	</body>
 </html>

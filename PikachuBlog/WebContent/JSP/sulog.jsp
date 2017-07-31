@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			window.location="${pageContext.request.contextPath}/blog/findCaoGaoPaper?type=0"	
+			window.location="${pageContext.request.contextPath}/blog/findCaoGaoPaper?type=1"	
 		</script>
 	</body>
 </html>

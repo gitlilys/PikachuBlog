@@ -55,10 +55,10 @@ public class PaperController {
 	 * @return
 	 */
 	@RequestMapping(value="/blog/findCaoGaoPaper")
-	public String findCaoGaoPaper(HttpServletRequest request, @RequestParam("enable") int enable, @RequestParam("type") int type) {
+	public String findCaoGaoPaper(HttpServletRequest request, @RequestParam(value="type") int type) {
 		List<Paper> list = new ArrayList<>();
 		
-		list = paperService.findCaoGao(enable);
+		list = paperService.findCaoGao(1);
 		
 		System.out.println("list    :" + list);
 		for(Paper p : list) {
@@ -70,12 +70,8 @@ public class PaperController {
 		request.getSession().setAttribute("list", list);
 		
 		if(type == 1)
-			return "redirect:/index.jsp";
-		
-		if(enable == 0)
-			return "redirect:/JSP/user/caogaoList.jsp";
-		else
-			return "redirect:/JSP/user/wenzhangGuanliList.jsp";
+			return "redirect:/successlog.jsp";
+		return "redirect:/index.jsp";
 	}
 	
 	/**
@@ -97,6 +93,20 @@ public class PaperController {
 			return "redirect:/JSP/user/chakanwenzhang.jsp";
 		return "redirect:/JSP/pinglun.jsp";
 	}
+	
+	@RequestMapping(value="blog/findPaperByUser")
+	public String findPaperByUser(HttpServletRequest request, @RequestParam(value="userId") String userId, @RequestParam(value="enable") int enable) {
+		List<Paper> list = new ArrayList<>();
+		list = paperService.findPaperByUser(userId, enable);
+		
+		request.getSession().setAttribute("listUser", list);
+
+		if(enable == 0)
+			return "redirect:/JSP/user/caogaoList.jsp";
+		else
+			return "redirect:/JSP/user/wenzhangGuanliList.jsp";
+	}
+
 	
 	/**
 	 * 删除文章

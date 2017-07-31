@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.pikachu.Utils.BaseUtils;
 import com.pikachu.domain.Comment;
 import com.pikachu.domain.Paper;
+import com.pikachu.domain.User;
 import com.pikachu.service.CommentService;
 
 @Controller
@@ -29,11 +30,18 @@ public class CommentController {
 	 */
 	@RequestMapping(value="/blog/addComment") 
 	public String addComment(HttpServletRequest request, @RequestParam(value="id") String id) {
+		User user = (User) request.getSession().getAttribute("NOWUSER");
 		String comment = request.getParameter("cmt");
 		Comment cmt = new Comment();
 		cmt.setComment_id(BaseUtils.getUUID());
 		cmt.setComment_paperid(id);
-		cmt.setComment_user("user");
+		String name = "";
+		if(user == null) {
+			name = "匿名";
+		} else {
+			name= user.getUser_name();
+		}
+		cmt.setComment_user(name);
 		cmt.setComment_content(comment);
 		commentService.addComment(cmt);
 		List<Comment> list = new ArrayList<>();

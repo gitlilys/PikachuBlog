@@ -27,7 +27,9 @@
 			<!--logo部分-->
 			<div class="col-md-9">
 				<div class="main_container_left">
-					<span>皮&nbsp;卡&nbsp;丘&nbsp;博&nbsp;客&nbsp;系&nbsp;统</span>
+					<span><h3>皮&nbsp;卡&nbsp;丘&nbsp;博&nbsp;客&nbsp;系&nbsp;统
+					<a target="_top" href="../sulog.jsp"><span class="glyphicon glyphicon-user"></span> 首页	
+					 </a></h3></span>
 				</div>
 			</div>
 			<!--头像-->

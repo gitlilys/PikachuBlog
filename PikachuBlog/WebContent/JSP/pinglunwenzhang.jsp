@@ -6,14 +6,20 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">  
+		<script src="../css/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
 		<title>查看文章</title>
 	</head>
 	<body>
-	标题:&nbsp;<textarea rows="1" cols="50" readonly="readonly" style="resize: none">${content.blog_title}</textarea>
+	<div class="input-group input-group-lg">
+			<span class="input-group-addon">标题</span>
+				<textarea rows="1" cols="50" readonly="readonly" style="resize: none" class="form-control">${content.blog_title}</textarea>
+		</div><br>
 	<textarea id="myeditor" name="myeditor" rows="5" cols="60" readonly="readonly" >${content.blog_content}</textarea> <br><br>
 	<c:forEach var='i' begin='1' end='${fn:length(commentList)}'>
-		[用户${commentList[i-1].comment_user}]: ${commentList[i-1].comment_content} <br>
+		[用户:${commentList[i-1].comment_user}]: ${commentList[i-1].comment_content} <br>
 	</c:forEach>
 	<br>
 	<form action="${pageContext.request.contextPath}/blog/addComment?id=${paperId}" method="post">
