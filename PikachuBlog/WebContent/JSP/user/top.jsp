@@ -3,20 +3,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="../../js/bootstrap.js" ></script>
 		<link rel="stylesheet" href="../../css/bootstrap.css" />
-		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
-		<script type="text/javascript" src="../../js/bootstrap.js" ></script>
-		<title>top部分</title>
-		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
-		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
-		<script type="text/javascript" src="../../js/bootstrap.js" ></script>
-		<link rel="stylesheet" href="../../css/普通用户登录成功/top.css" />
 	</head>
+	<style>
+		body{
+			background-color: rgba(255,255,255,0.7);
+		}
+		.main{
+			width: 1070px;
+			margin-top: 20px;
+		}
+		span{
+			color: gainsboro;
+		}
+	</style>
 	<body>
-		<div class="row" id="total">
+	<div class="row main">
 			<!--logo部分-->
 			<div class="col-md-9">
 				<div class="main_container_left">

@@ -14,24 +14,7 @@
 		<link rel="stylesheet" href="../../css/style.css" />
 		<title>用户管理</title>
 	</head>
-	<style>
-		body{
-			background-color: rgba(0,0,0,0.7);
-		}
-		.main{
-			margin: 50px 100px;
-			color: gainsboro;
-		}
-		th{
-			text-align: center;
-			color: #EEDD82;
-			background-color:rgba(87,96,105,0.7);
-		}
-		tr{
-			text-align: center;
-			background-color:rgba(87,96,105,0.7);
-		}
-	</style>
+	
 	<script>
 //		$(function(){
 //			$("tbody tr:even").addClass("even");
@@ -39,14 +22,14 @@
 //		});
 	</script>
 	<body>
-		<div class="main">
-			<table class="table table-bordered">
+		 <div class="container"> 
+ <table style="width: 700px;" class="table table-striped table-hover table-bordered"> 
 				<thead>
 					<tr>
 						<th>账户名</th>
 						<th>身份</th>
 						<th>状态</th>
-						<th>禁止登陆</th>
+						<th>用户状态</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -55,11 +38,23 @@
 						<td>${list[i].user_name}</td>
 						<td>${list[i].user_role}</td>
 						<td>${list[i].user_enable}</td>
-						<td><input type="checkbox" name="enable" /></td>
+						<td><button id="button" onclick="btn()" type="button" class="btn btn-success">禁止</button></td>
 					</tr>
 				</c:forEach>
 				</tbody>
 			</table>
 		</div>
+		<script type="text/javascript">
+			function btn() {
+				var html1='允许';
+				var html2='禁止';
+				var buttonValue= document.getElementById('button').innerHTML;
+				if(buttonValue == "禁止") {
+					document.getElementById('button').innerText = html1;
+				} else {
+					document.getElementById('button').innerText = html2;
+				}
+			}	
+		</script>	
 	</body>
 </html>

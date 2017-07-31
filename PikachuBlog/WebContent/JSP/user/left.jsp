@@ -10,10 +10,61 @@
 		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
 		<script type="text/javascript" src="../../js/bootstrap.js" ></script>
 		<link rel="stylesheet" href="../../css/bootstrap.css" />
-		<link href="../../css/普通用户登录成功/left.css"  rel="stylesheet">
 		<script type="text/javascript" src="../../js/普通用户登录成功/left.js"></script>
 
 	</head>
+	<style>
+		.total {
+			margin-top: 40px;
+			width: 180px;
+		}
+		
+		body {
+			background-color: rgba(255, 255, 255, 0.9);
+			height: 495px;
+		}
+		
+		html {
+			border-right: 1px solid darkgray;
+		}
+		
+		.t1>.tb {
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+		
+		.t1>.th {
+			margin-left: 30px;
+		}
+		
+		.th>img {
+			margin-right: 10px;
+		}
+		
+		.th>span {
+			font-size: larger;
+			color: #8B5A00;
+		}
+		
+		ul>li>a>span {
+			color: antiquewhite;
+		}
+		
+		ul>li>a {
+			text-decoration: none;
+			color: #8B5A00;
+		}
+		
+		ul>li {
+			list-style: none;
+			height: 30px;
+			line-height: -moz-block-height;
+		}
+		
+		ul {
+			border-style: none;
+		}
+	</style>
 	<body>
 		<!--显示左边导航的列表-->
 		<div class="total">

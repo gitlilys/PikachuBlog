@@ -11,12 +11,32 @@
 		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
 		<script type="text/javascript" src="../../js/bootstrap.js" ></script>
 		<link rel="stylesheet" href="../../css/bootstrap.css" />
-		<link rel="stylesheet" href="../../css/普通用户登录成功/草稿箱.css" />
 		<title>文章管理</title>
 	</head>
 	<body>
+		<br><br>
+		<div class="container"> 
+ 		<table style="width: 1000px;" class="table table-striped table-hover table-bordered"> 
+ 		<thead>
+ 			<tr>
+ 				<th>序号</th>	
+ 				<th>文章</th>
+ 				<th>创作时间</th>
+ 				<th>操作</th>
+ 			</tr>	
+ 		</thead>
+ 		
 		<c:forEach var='i' begin='1' end='${fn:length(list)}'>
-			<a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=0">${list[i-1].blog_title}</a> <br>
+		<tbody>
+			<tr>
+				<td>${i}</td>
+				<td><a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=0">${list[i-1].blog_title}</a> </td>
+				<td>${list[i-1].blog_createtime}</td>
+				<td><button id="btn${i}" type="button" class="btn btn-success">删除</button></td>
+			</tr>
+		</tbody>
 		</c:forEach>
+		</table>
+		</div>
 	</body>
 </html>

@@ -13,9 +13,19 @@
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
 		<script type="text/javascript" src="js/bootstrap.js" ></script>
-		<link rel="stylesheet" href="css/首页/首页.css" />
 		<script type="text/javascript" src="js/首页/首页.js" ></script>
 	</head>
+	<style>
+		th{
+			text-align: center;
+			color: #EEDD82;
+			background-color:rgba(0,0,,0.7);
+		}
+		tr{
+			text-align: center;
+			background-color:rgba(87,96,105,0.7);
+		}
+	</style>
 	<body>
 		<div class="container-fluid" id="body">
 			<!--logo部分-->
@@ -87,10 +97,30 @@
 		  </a>
 		</div>
 		</div><!--轮播图结束-->
-		
+		<br><br>
+		 <div class="container"> 
+ 		<table style="width: 1000px;" class="table table-striped table-hover table-bordered"> 
+ 		<thead>
+			<tr>
+				<th>序号</th>
+				<th>文章</th>
+				<th>作者></th>
+				<th>创建时间</th>
+			</tr>	
+		</thead>
+	
 		<c:forEach var='i' begin='1' end='${fn:length(list)}'>
-			<a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=1">${list[i-1].blog_title}</a> <br>
+		<tbody>
+			<tr>
+				<td>${i}</td>
+				<td><a href="${pageContext.request.contextPath}/blog/findPaperById?id=${list[i-1].blog_id}&type=1">${list[i-1].blog_title}</a></td>
+				<td>${list[i-1].blog_user}</td>
+				<td>${list[i-1].blog_createtime}</td>
+			</tr>
+		</tbody>
 		</c:forEach>
+		
+		</table>
 		
 		<pg:pager items="1001" export="currentPageNumber=pageNumber">
 				<pg:first>
@@ -116,7 +146,7 @@
 					<a href="">尾页</a>		
 				</pg:last>
 		</pg:pager>
-		
+		</div>	
 	</body>
 	
 </html>

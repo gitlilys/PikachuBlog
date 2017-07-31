@@ -14,11 +14,11 @@
 	<style>
 		.total {
 			margin-top: 40px;
-			width: 229px;
+			width: 180px;
 		}
 		
 		body {
-			background-color: rgba(0, 0, 0, 0.9);
+			background-color: rgba(255, 255, 255, 0.9);
 			height: 495px;
 		}
 		
@@ -41,7 +41,7 @@
 		
 		.th>span {
 			font-size: larger;
-			color: #EEDD82;
+			color: #8B5A00;
 		}
 		
 		ul>li>a>span {
@@ -50,7 +50,7 @@
 		
 		ul>li>a {
 			text-decoration: none;
-			color: #000000;
+			color: #8B5A00;
 		}
 		
 		ul>li {
