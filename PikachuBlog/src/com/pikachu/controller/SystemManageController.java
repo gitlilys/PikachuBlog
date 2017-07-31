@@ -74,7 +74,7 @@ public class SystemManageController {
 			User user = new User();
 			String name = request.getParameter("name");
 			user = systemManageService.findUserByName(name);
-			if(user != null) {
+			if(user != null && user.getUser_enable() == 1) {
 				String newpassword = BaseUtils.enCode(password + "{" + user.getUser_name() + "}");
 				if(user.getUser_password().equals(newpassword)) {
 					request.getSession().setAttribute("NOWUSER", user);
@@ -86,7 +86,7 @@ public class SystemManageController {
 					request.setAttribute("ERROR1", "密码错误！");
 				}
 			} else {
-				request.setAttribute("ERROR2", "用户不存在！");
+				request.setAttribute("ERROR2", "用户不存在或尚未激活！");
 			}
 		} else {
 			request.setAttribute("ERROR3", "验证码错误！");

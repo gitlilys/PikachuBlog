@@ -22,7 +22,8 @@ public class SessionFilter extends OncePerRequestFilter {
 				"wangjimima.jsp",
 				"pinglun.jsp",
 				"pinglunwenzhang.jsp",
-				"pinglunList.jsp"
+				"pinglunList.jsp",
+				"adminGu.jsp"
 		};
 		
 		String uri = request.getRequestURI();

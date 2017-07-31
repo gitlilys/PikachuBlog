@@ -16,4 +16,6 @@ public interface SystemManageDao {
 
 	List<User> getAllUser();
 
+	void deleteUser(String id);
+
 }

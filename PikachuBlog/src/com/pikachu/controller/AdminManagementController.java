@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.pikachu.domain.User;
 import com.pikachu.service.AdminManagementService;
@@ -31,5 +32,12 @@ public class AdminManagementController {
 		request.getSession().setAttribute("list", list);
 		
 		return "redirect:/JSP/admin/adminGuanli.jsp";
+	}
+	
+	@RequestMapping(value="/blog/deleteUser") 
+	public String deleteUser(HttpServletRequest request, @RequestParam(value="id") String id) {
+		adminManagementService.deleteUser(id);
+		
+		return "redirect:/JSP/admin/adminGu.jsp";
 	}
 }

@@ -8,4 +8,6 @@ public interface AdminManagementService {
 
 	public List<User> getAllUser();
 
+	public void deleteUser(String id);
+
 }

@@ -33,18 +33,22 @@
 					</tr>
 				</thead>
 				<tbody>
-				<c:forEach var='i' begin='0' end='${fn:length(list)-1}'>
+				<c:forEach var='i' begin='1' end='${fn:length(list)}'>
 					<tr>
-						<td>${list[i].user_name}</td>
-						<td>${list[i].user_role}</td>
-						<td>${list[i].user_enable}</td>
-						<td><button id="button" onclick="btn()" type="button" class="btn btn-success">禁止</button></td>
+						<td>${list[i-1].user_name}</td>
+						<td>${list[i-1].user_role}</td>
+						<td>${list[i-1].user_enable}</td>
+						<td>
+						<form action="${pageContext.request.contextPath}/blog/deleteUser?id=${list[i-1].user_id}" method="post">
+							<button type="submit"  class="btn btn-success">移除用户</button>
+						</form>	
+						</td>
 					</tr>
 				</c:forEach>
 				</tbody>
 			</table>
 		</div>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			function btn() {
 				var html1='允许';
 				var html2='禁止';
@@ -55,6 +59,6 @@
 					document.getElementById('button').innerText = html2;
 				}
 			}	
-		</script>	
+		</script> -->	
 	</body>
 </html>

@@ -23,4 +23,9 @@ public class AdminManagementServiceImpl implements AdminManagementService {
 		return list;
 	}
 
+	@Override
+	public void deleteUser(String id) {
+		systemManageDao.deleteUser(id);
+	}
+
 }
